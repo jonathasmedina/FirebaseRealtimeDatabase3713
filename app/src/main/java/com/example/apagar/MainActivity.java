@@ -48,12 +48,12 @@ public class MainActivity extends AppCompatActivity {
         /*     */
 
 
-        //exemplo: adicionar informação ao firebase
+        //exemplo: informação que será adicionada ao firebase
         Pessoa p = new Pessoa();
         p.setId("2");
         p.setNome("maria444 joão da silva");
 
-        //exemplo: adicionar informação ao firebase
+        //exemplo: informação que será adicionada ao firebase
         Pessoa p2 = new Pessoa();
         p2.setId("22");
         p2.setNome("maria2123123 joão da silva");
@@ -61,13 +61,13 @@ public class MainActivity extends AppCompatActivity {
         //exemplo: retornar usuário logado. Atenção: nesta tela específica, não há autenticação/usuário logado.
         FirebaseUser user = FirebaseAuth.getInstance().getCurrentUser();
 
-        //exemplo: aticionar informação ao firebase, utilizando id do usuário logado.
+        //exemplo: adicionar informação ao firebase, utilizando id do usuário logado.
         databaseReference.child("Usuário").
                 child(user.getUid()).
                 child(p.getNome()).
                 setValue(p);
 
-        //exemplo: aticionar informação ao firebase, utilizando id do usuário logado.
+        //exemplo: adicionar informação ao firebase, utilizando id do usuário logado.
         databaseReference.child("Usuário").
                 child(user.getUid()).
                 child(p2.getNome()).
